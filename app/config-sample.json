@@ -1,0 +1,11 @@
+{
+    "hybrid_analysis": {
+        "api": "XXXXXXXXXXXXXXXXXX",
+        "secret": "XXXXXXXXXXXXXXXXXX"
+    },
+    "malshare": {
+        "api": "XXXXXXXXXXXXXXXXXX"
+    },
+    "redis_host": "redis",
+    "redis_port": 6379
+}
