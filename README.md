@@ -9,8 +9,8 @@ This is a simple Python3 Flask application running on port 5000 interacting with
 Git clone the repository: 
 
 ```bash
-$ git clone https://github.com/PaulSec/metasearch.git
-$ cd metasearch
+$ git clone https://github.com/PaulSec/metasearch-public.git
+$ cd metasearch-public
 ```
 
 
