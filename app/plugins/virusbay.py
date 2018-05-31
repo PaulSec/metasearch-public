@@ -7,7 +7,7 @@ def check(query):
     req = requests.get(url).json()
     res = req
     res['found'] = True if req['search'] != [] else False
-    res['name'] = 'virustotal'
+    res['name'] = plugin_name
     return res
 
 class Plugin:
