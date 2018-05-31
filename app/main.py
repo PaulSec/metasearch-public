@@ -35,7 +35,7 @@ def search(query):
             tmp_result = json.loads(test_redis)
         else:
             tmp_result = plugins[plugin]['check'](query)
-            cache.set('{}_{}'.format(plugin, query), json.dumps(tmp_result))
+            cache.setex('{}_{}'.format(plugin, query), json.dumps(tmp_result), 3600)
         result.append(tmp_result)
 
     response = app.response_class(
@@ -69,7 +69,7 @@ def search_provider(provider, query):
 
     # If not, it fetches it
     result = plugins[provider]['check'](query)
-    cache.set('{}_{}'.format(provider, query), json.dumps(result))
+    cache.setex('{}_{}'.format(provider, query), json.dumps(result), 3600)
     response = app.response_class(
         response=json.dumps(result),
         status=200 if result['found'] else 404,
